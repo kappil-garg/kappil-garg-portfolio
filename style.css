@@ -1,0 +1,223 @@
+/* Root Variables */
+:root {
+    --font-body: "Roboto", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+    --color-bg: #101214;
+    --color-text: #d0d3d8;
+    --color-muted: #b0b3b8;
+    --color-accent: #00bcd4;
+    --color-accent-hover: #00e0ff;
+    --color-subtle: #a0a3a8;
+    --color-surface: #1c1e22;
+    --color-border: #2a2c2f;
+    --color-footer: #7a7c80;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+p,
+li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: #fff;
+}
+
+/* Tagline */
+.tagline {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-subtle);
+    margin-top: 0.5rem;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--color-bg);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar a {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 188, 212, 0.2);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--color-muted);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent);
+}
+
+/* Sections */
+.section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.section p {
+    text-align: justify;
+    padding-bottom: 0.5rem;
+}
+
+.section a {
+    color: var(--color-accent);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.section a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.skill-group {
+    flex: 1 1 280px;
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-group h3 {
+    font-size: 1.3rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.3rem;
+}
+
+.skill-group ul {
+    list-style: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-footer);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+    .nav-right a {
+        margin: 5px 10px 0 0;
+    }
+    .hero {
+        padding-top: 10rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
